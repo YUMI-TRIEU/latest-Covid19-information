@@ -1,6 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
-import Covid19 from "./components/covid19";
+import Covid19 from "./covid19";
 
 describe('Covid19', () => {
   beforeAll(() => {
