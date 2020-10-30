@@ -1,6 +1,6 @@
 import React from "react";
 import NumberFormat from 'react-number-format';
-import NewConfirmed from "./new.js";
+import NewConfirmed from "./newConfirmed.js";
 import NewDeaths from "./newDeaths.js";
 class Covid19 extends React.Component {
   constructor(props) {
@@ -8,13 +8,13 @@ class Covid19 extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      covidApiData: [],
+      covidApiData: {},
       keyword: null
     }
   }
-  fetchCovid19Data = () => {
+  async fetchCovid19Data() {
     let covid19SumaryAPI = 'https://api.covid19api.com/summary';
-    fetch(covid19SumaryAPI)
+    await fetch(covid19SumaryAPI)
       .then(res => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ class Covid19 extends React.Component {
   onChangeHandler = async e => {
     this.setState({ keyword: e.target.value });
   };
-  componentDidMount = () => {
+  componentDidMount(){
     this.fetchCovid19Data();
   }
   render() {
@@ -45,7 +45,7 @@ class Covid19 extends React.Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <span className="spinner"></span>;
     } else {
       return (
         <React.Fragment>
@@ -111,7 +111,7 @@ class Covid19 extends React.Component {
                   {
                     covidApiData.Countries.filter((country)=>{
                       if(keyword==null)
-                      return country
+                        return country
                       else if (country.Country.toLowerCase().includes(keyword.toLowerCase())) {
                         return country
                       }
