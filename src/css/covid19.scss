@@ -1,0 +1,172 @@
+.summary-block {
+    margin-bottom: 50px;
+    .title {
+        text-align: center;
+        font-size: 35px;
+    }
+    .sumary-txt {
+        text-align: center;
+    }
+    .content {
+        position: relative;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        &::before,
+        &::after {
+            content: "";
+            background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0%,#9F224E 51.56%,rgba(255,255,255,0) 100%,rgba(255,255,255,0) 100%);
+            background: linear-gradient(90deg,rgba(255,255,255,0) 0%,#9F224E 51.56%,rgba(255,255,255,0) 100%,rgba(255,255,255,0) 100%);
+            height: 1px;
+            left: 0;
+            right: 0;
+            position: absolute;
+        } 
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        > div {
+            margin: 10px;  
+        }
+        span {
+            display: block;
+        }
+        .total {
+            font: bold 22px/1.6 Arial;
+            display: inline-block;
+            height: 48px;
+            line-height: 48px;
+            min-width: 150px;
+            text-align: center;
+            border-radius: 4px;
+            background: #757575;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .global-confirmed {
+            .total {
+                background-color: #f3585b;
+            }
+            .new {
+                color: #9f224e;
+            }
+        }
+        .global-deaths {
+            .total {
+                background-color: #222;
+            }
+            .new {
+                color: #222;
+            }
+        }
+        .global-recovered {
+            .total {
+                background-color: #8cf2cd;
+                color: #00945e;
+            }
+            .new {
+                color: #00945e;
+            }
+        }
+    }
+}
+
+.countries-block {
+    .inner {
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .new {
+        @media screen and (max-width: 767px) {
+            display: none;
+        }
+    }
+    .content {
+        margin-top: 15px;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;    
+        border-bottom: 2px solid #e5e5e5;
+        
+        div {
+            color: #757575;
+            padding: 10px;
+            width: calc( 100% / 6);
+            align-items: center;
+            text-align: right;
+            @media screen and (max-width: 767px) {
+                width: calc( 100% / 4);
+            }
+        }
+        .country {
+            text-align: left;
+        }
+    }
+    .countries {
+        .item {
+            border-bottom: 1px solid #E5E5E5;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 0;
+            div {
+                text-align: right;
+                width: calc( 100% / 6);
+                @media screen and (max-width: 767px) {
+                    width: calc( 100% / 4);
+                }
+                span {
+                    border-radius: 3px;
+                    text-align: right;
+                    line-height: 2;
+                    float: right;
+                    @media screen and (min-width: 768px) {
+                        min-width: 75px;
+                        padding: 0 5px;
+                    }
+                }
+                .new-deaths {
+                    background-color: #757575;
+                    color: #fff;
+                }
+                .new-confirmed {
+                    color: #fff;
+                    background-color: #f3585b;
+                }
+            }
+            .country {
+                text-align: left;
+            }
+        }
+    }
+    .recovered {
+        color: #00945E;
+    }
+    .deaths {
+        // color: #757575;
+    }
+    .confirmed {
+        color: #F3585B;
+    }
+    .search-block {
+        background: white url('../asset/images/search.svg') no-repeat 10px center;
+        border-radius: 3px;
+        background-size: 20px;
+        input {
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            padding: 10px 10px 10px 40px;
+            margin: 0;
+            outline: none;
+            background-color: transparent;
+        }
+    }    
+}

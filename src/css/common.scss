@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica', 'Helvetica Neue', sans-serif;
+  background: #eee;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  @media screen and (min-width: 768px) {
+    max-width: 750px;
+  }
+  @media screen and (min-width: 992px) {
+    max-width: 970px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 1170px;
+  }
+}
+button {
+  border: 0;
+  padding: 0;
+  &:focus {
+    outline: 0;
+  }
+}
