@@ -91,7 +91,8 @@ class Covid19 extends React.Component {
               <div className="inner">
                 <h2 className="title">Thống kê theo quốc gia: </h2>
                 <div className="search-block">
-                  <input
+                  <input 
+                    className="search-btn"
                     value={this.state.value}
                     onChange={e => this.onChangeHandler(e)}
                     placeholder="Tìm theo tên quốc gia"
@@ -109,12 +110,11 @@ class Covid19 extends React.Component {
                 </div>
                 <div className="countries">
                   {
-                    covidApiData.Countries.filter((country)=>{
+                    covidApiData.Countries.filter(countryitem  => {
                       if(keyword==null)
-                        return country
-                      else if (country.Country.toLowerCase().includes(keyword.toLowerCase())) {
-                        return country
-                      }
+                        return countryitem
+                      else if (countryitem.Country.toLowerCase().includes(keyword.toLowerCase()))
+                        return countryitem
                     }).map((country, index) => (
                       <div className="item" key={index}>
                         <div className='country'>{country.Country}</div>
