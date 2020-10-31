@@ -52,7 +52,7 @@ class Covid19 extends React.Component {
           <div className="summary-block">
             <div className="container">
               <h1 className="title">Covid-19 trên Thế giới</h1>
-              {/* <p className='sumary-txt'>Tính đến {hours}, {date} (Tổng cộng có <NumberFormat thousandSeparator={true} value={covidApiData.Global.TotalConfirmed} displayType={'text'} /> ca nhiễm)</p> */}
+              <p className='sumary-txt'>Tính đến {hours}, {date} (Tổng cộng có <NumberFormat thousandSeparator={true} value={covidApiData.Global.TotalConfirmed} displayType={'text'} /> ca nhiễm)</p>
               <div className="content">
                 <div className="global-confirmed">
                   <span className="txt">Nhiễm</span>
