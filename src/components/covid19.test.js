@@ -1,8 +1,8 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount, unmount } from "enzyme";
 import Covid19 from "./covid19";
 
-describe('Covid19', () => {
+describe('Covid19 component test', () => {
   beforeAll(() => {
     window.fetch = jest.fn();
   });

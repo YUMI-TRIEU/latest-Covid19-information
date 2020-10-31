@@ -34,7 +34,7 @@ class Covid19 extends React.Component {
   onChangeHandler = async e => {
     this.setState({ keyword: e.target.value });
   };
-  componentDidMount(){
+  async componentDidMount(){
     this.fetchCovid19Data();
   }
   render() {
@@ -45,14 +45,14 @@ class Covid19 extends React.Component {
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
-      return <span className="spinner"></span>;
+      return <span className="spinner">Loading...</span>;
     } else {
       return (
         <React.Fragment>
           <div className="summary-block">
             <div className="container">
               <h1 className="title">Covid-19 trên Thế giới</h1>
-              <p className='sumary-txt'>Tính đến {hours}, {date} (Tổng cộng có <NumberFormat thousandSeparator={true} value={covidApiData.Global.TotalConfirmed} displayType={'text'} /> ca nhiễm)</p>
+              {/* <p className='sumary-txt'>Tính đến {hours}, {date} (Tổng cộng có <NumberFormat thousandSeparator={true} value={covidApiData.Global.TotalConfirmed} displayType={'text'} /> ca nhiễm)</p> */}
               <div className="content">
                 <div className="global-confirmed">
                   <span className="txt">Nhiễm</span>
