@@ -5,8 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Người dùng có thể xem thông tin các ca nhiễm Covid-19 theo các quốc gia trên toàn thế giới.
 
 2. CHỨC NĂNG
+
 -Sử dụng API: https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest
+
 -> tìm ca nhiểm theo tên quốc gia.
+
 -> Hiển thị thông tin chi tiết tìm kiếm được do API trên trả về
 
 3. YÊU CẦU KỸ THUẬT
