@@ -1,4 +1,27 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Describle
+
+1. MÔ TẢ
+Người dùng có thể xem thông tin các ca nhiễm Covid-19 theo các quốc gia trên toàn thế giới.
+
+2. CHỨC NĂNG
+-Sử dụng API: https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest
+-> tìm ca nhiểm theo tên quốc gia.
+-> Hiển thị thông tin chi tiết tìm kiếm được do API trên trả về
+
+3. YÊU CẦU KỸ THUẬT
+- Unit Test code
+- Giải quyết được các vấn đề cơ bản về performace và sercurity.
+- Code nên rõ ràng(clean), dễ bảo trì, dễ mở rộng.
+- Có sử dụng một vài Design Pattern và các Nguyên lý lập trình cơ bản.
+- Sản phẩm dễ dàng deploy trên các môi trường như develop và production. Đã deployed http://www.covid19info.byethost3.com/
+
+4. Ngôn ngữ lập trình
+- Javascript/Typescript
+- HTML/CSS
+
+5. Framework
+- React
 
 ## Available Scripts
 
